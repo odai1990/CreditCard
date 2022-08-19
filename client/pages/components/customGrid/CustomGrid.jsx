@@ -18,7 +18,7 @@ const CustomGrid = ({ data }) => {
                 <tbody>
                     {
                         data?.map((data, index) => {
-                            return (<tr>
+                            return (<tr key={data.Id}>
                                 <td>{data?.Id}</td>
                                 <td>{data?.CardName}</td>
                                 <td>{data?.CardNumber}</td>

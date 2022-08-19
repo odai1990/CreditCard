@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const CustomInput = ({ onChange, type, value, label }) => {
     return (
         <div className={classNames(styles.container)}>
-            <label for={label}>{label}</label>
+            <label htmlFor={label}>{label}</label>
             <input id={label} type={type} onChange={(e) => onChange(e.target.value)} value={value} />
         </div>
     )

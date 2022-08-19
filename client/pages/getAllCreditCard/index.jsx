@@ -1,4 +1,4 @@
-import React, { PropTypes, useEffect, useRef, useState } from 'react'
+import React, {  useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import Header from '../layout/header';
 import CustomGrid from '../components/customGrid/CustomGrid';
@@ -26,8 +26,5 @@ const GetAllCreditCard = props => {
     )
 }
 
-GetAllCreditCard.propTypes = {
-
-}
 
 export default GetAllCreditCard

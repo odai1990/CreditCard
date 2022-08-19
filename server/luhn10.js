@@ -12,6 +12,8 @@ const luhn10 = (cardNumber) => {
 
 //this chunk of code to convert number to array and start multypliy to 2 or 1 depend on the position
     const CardNumberArray = Array.from(cardNumber, Number)
+    if(16>CardNumberArray>19)
+    return false
     const mulitArray = [];
     CardNumberArray.forEach((ele, index) => {
         if (index % 2 == 0) {

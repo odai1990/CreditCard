@@ -1,7 +1,8 @@
 import React, { PropTypes, useEffect, useRef, useState } from 'react'
 import axios from 'axios'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Header from '../layout/header';
+import CustomGrid from '../components/customGrid/CustomGrid';
+
 const GetAllCreditCard = props => {
     const [allCridetCards, setAllCridetCards] = useState([])
     const shodLog = useRef(true)
@@ -10,18 +11,17 @@ const GetAllCreditCard = props => {
         if (shodLog.current) {
             shodLog.current = false;
             const preFixUrl = process.env.NEXT_PUBLIC_HOST;
-            axios.get(`${preFixUrl}/getAll`).then(res => {
-                setAllCridetCards(res?.data?.row)
-                notify()
-                
-            })
+            axios.get(`${preFixUrl}/getAll`).then(res => {                
+                setAllCridetCards(res?.data?.data)             
+                            })
         }
 
     }, [])
 
     return (
         <div>
-            getall
+            <Header selectedTab={0}/>
+           <CustomGrid data={allCridetCards}/>
         </div>
     )
 }

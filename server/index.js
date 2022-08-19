@@ -21,7 +21,6 @@ app.get("/getAll", cors(), (req, res) => {
 });
 
 app.post("/add", cors(), (req, res) => {
-console.log("Dfdsf",req.body)
   if (luhn10(req.body.cardNumber))
     db.serialize(() => {
       const stmt = db.prepare("INSERT INTO Credit (cardName,CardNumber) VALUES(?,?) ");

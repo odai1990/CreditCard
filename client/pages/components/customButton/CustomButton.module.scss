@@ -1,0 +1,18 @@
+.container {
+    text-align: end;
+    margin-top: 5px;
+
+    button {
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        background-color: #f3a117;
+        color: white;
+        cursor: pointer;
+    }
+
+    .disabeld {
+        opacity: 0.3;
+        cursor: none;
+    }
+}
